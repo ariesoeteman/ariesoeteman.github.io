@@ -12,4 +12,4 @@ My background is in Logic and Computation, with recent research project spanning
 
 I love teaching and presenting, and enjoy coding my way around problems. Finally, I'm always looking for ways to apply my technical background to social issues. See [this](https://link.springer.com/chapter/10.1007/978-3-031-20614-6_19) project on fairer resource allocation via local elections, and [this](https://vu.nl/nl/over-de-vu/meer-over/amsterdam-oase-studiecafe) social meeting place for students in Amsterdam. Please let me know if you if you're setting up a social project and think I could help.
 
-If you are interested in any of these topics and would like to discuss ideas, please feel free to send me a message on Linkedin. I am always open to talk.
+If you are interested in any of these topics and would like to discuss ideas, feel free to send me a message on Linkedin. I am always open to talk.
