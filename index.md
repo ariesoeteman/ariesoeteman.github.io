@@ -6,7 +6,7 @@ profile:
   image: arie.jpg
 published: true
 ---
-As a researcher and developer at [Fermioniq](https://www.fermioniq.com/), I am exploring quantum algorithms for quantum chemistry. My main focus is currently on improving the capacities of classical quantum circuit emulators using tensor network techniques.
+As a researcher and developer at [Fermioniq](https://www.fermioniq.com/), I am exploring quantum algorithms nd tensor network optimisation. My main focus is currently on improving the capacities of classical quantum circuit emulators using tensor network techniques.
 
 My background is in Logic and Computation, with recent research project spanning topics such as Automata Theory, Quantum Computing, Computational Social Choice, Cognitive Modelling, Logical Programming, Philosophy of AI and Proof Theory. My central interest is in combining Machine Learning and Logic to create noise-resistant and explainable AI systems.
 
