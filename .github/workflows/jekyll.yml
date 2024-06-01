@@ -8,8 +8,8 @@ name: Deploy Jekyll site to Pages
 
 on:
   push:
-    branches:
-      - 'master'
+    branches: [master]
+
   # Runs on pushes targeting the default branch
     # branches: [$default-branch]
 
