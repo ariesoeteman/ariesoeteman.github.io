@@ -4,7 +4,7 @@ title: Arie Soeteman
 description: Logic, AI & Quantum Computing
 affiliation: Fermioniq
 
-baseurl: /personal_webpage #name of GitHub repository
+# baseurl: /personal_webpage #name of GitHub repository
 url: "" #custom url to be used instead of GitHub repository
 email: #
 
@@ -67,6 +67,8 @@ exclude:
   - README.md
   - LICENSE.md
   - vendor/bundle/
+  # - vendor/bundle/ruby/3.0.0/gems/jekyll-3.10.0/lib/site_template
+  # - vendor/bundle/ruby/3.0.0/gems/jekyll-4.3.2/lib/site_template
 
 plugins:
   - jekyll-seo-tag

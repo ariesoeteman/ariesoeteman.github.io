@@ -1,5 +1,5 @@
 current directory: /home/arie/Documents/webpage/personal_webpage/vendor/bundle/ruby/3.0.0/gems/commonmarker-0.23.10/ext/commonmarker
-/usr/bin/ruby3.0 -I /usr/lib/ruby/vendor_ruby -r ./siteconf20240925-51485-h6p5x0.rb extconf.rb
+/usr/bin/ruby3.0 -I /usr/lib/ruby/vendor_ruby -r ./siteconf20240925-64185-ersiy.rb extconf.rb
 creating Makefile
 
 current directory: /home/arie/Documents/webpage/personal_webpage/vendor/bundle/ruby/3.0.0/gems/commonmarker-0.23.10/ext/commonmarker
@@ -59,4 +59,4 @@ linking shared-object commonmarker/commonmarker.so
 
 current directory: /home/arie/Documents/webpage/personal_webpage/vendor/bundle/ruby/3.0.0/gems/commonmarker-0.23.10/ext/commonmarker
 make DESTDIR\= install
-/usr/bin/install -c -m 0755 commonmarker.so ./.gem.20240925-51485-shal64/commonmarker
+/usr/bin/install -c -m 0755 commonmarker.so ./.gem.20240925-64185-18skez/commonmarker
