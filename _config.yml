@@ -14,15 +14,15 @@ permalink: /blog/:year/:title/
 paginate_path: /blog/page:num/
 
 # Social media links in footer
-twitter: false
-linkedin: "#"
-stackoverflow: "#"
-github: "#"
-researchgate: "#"
-orcid: "#"
-quora: "#"
-instagram: "#"
-facebook: "#"
+# twitter: false
+# linkedin: "#"
+# stackoverflow: "#"
+# github: "#"
+# researchgate: "#"
+# orcid: "#"
+# quora: "#"
+# instagram: "#"
+# facebook: "#"
 
 
 # Markdown
@@ -73,6 +73,4 @@ exclude:
 plugins:
   - jekyll-seo-tag
   - jekyll-paginate
-  - jekyll-email-protect
-  - jekyll-target-blank
   - jekyll-sitemap
