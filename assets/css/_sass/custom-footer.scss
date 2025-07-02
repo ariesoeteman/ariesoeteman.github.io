@@ -24,7 +24,12 @@
 }
 
 .custom-footer-content {
-  display: flex;
+  display: flex;  @media (max-width: $on-palm) {
+    flex-direction: column; /* Stack image and text for smaller screens */
+    align-items: center; /* Center items horizontally within the column layout */
+    text-align: center; /* Center text for smaller screens */
+  }
+
   justify-content: space-between;
   align-items: center;
 
@@ -42,4 +47,9 @@
   @include media-query($on-palm) {
     flex-direction: row; // side-by-side on larger screens
   }
+  
+  @media (max-width: $on-palm) {
+      padding-right: 0;
+  }
+
 }

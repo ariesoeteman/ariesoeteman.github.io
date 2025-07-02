@@ -3,9 +3,8 @@
   align-items: center; /* Vertically align items in the center */
   justify-content: center; /* Horizontally center content for smaller screens */
   flex-direction: column; /* Stack items vertically on small screens */
-  padding: 2em 1em; /* Padding for the entire section */
-  width: 95vw;
-  max-width: 95vw;
+  padding: 2em 0em; /* Padding for the entire section */
+  width: 100vw;
   margin-left: calc(-50vw + 50%); // ← KEY for full-bleed inside a centered layout
   min-height: 50vh;
 
@@ -27,7 +26,7 @@
   }
   @include media-query($on-laptop) {
 
-    padding: 4em 3em;
+    padding: 4em 0em;
   }
 }
 

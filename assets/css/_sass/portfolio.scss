@@ -1,13 +1,13 @@
-#portfolio::before {
-  margin-top: 200px; // match your header height
-}
+// #portfolio::before {
+//   margin-top: 100px; // match your header height
+// }
 
 .portfolio-section {
   display: flex;
   align-items: center; /* Vertically align items in the center */
   justify-content: center; /* Horizontally center content for smaller screens */
   flex-direction: column; /* Stack items vertically on small screens */
-  padding: 2em 1em; /* Padding for the entire section */
+  padding: 2em 0em; /* Padding for the entire section */
   min-height: 70vh; /* Ensure it takes up a good portion of the viewport */
   width: 100vw;
   margin-left: calc(-50vw + 50%); // ← KEY for full-bleed inside a centered layout
@@ -21,6 +21,7 @@
 //     background-color: darken($body-bg-dark, 5%);
 //   }
 
+
   @include media-query($on-palm) {
     align-items: flex-start;
     justify-content: flex-start;
@@ -29,6 +30,12 @@
     // Make sure it aligns to the left
     margin-right: auto;
   }
+}
+
+@media (max-width: $on-palm) {
+.portfolio-section {
+    padding-top: 1em;
+    }
 }
 
 .portfolio-content {
@@ -55,6 +62,10 @@
   margin-bottom: -1.5em;
   color: $portfolio-header-color;
   text-align: left;
+
+  @media (max-width: $on-palm) {
+    margin-bottom: 0;
+}
 }
 
 .project-list {
@@ -62,11 +73,18 @@
   flex-direction: column;
   gap: 3em;
   margin-bottom: 4em;
+  @media (max-width: $on-palm) {
+    margin-bottom: 1em;
+}
 }
 
 .project-item.reverse {
   flex-direction: row-reverse; /* Reverse the order of image and text */
-
+  @media (max-width: $on-palm) {
+    flex-direction: column; /* Stack image and text for smaller screens */
+    align-items: center; /* Center items horizontally within the column layout */
+    text-align: center; /* Center text for smaller screens */
+  }
     img {
         margin-left: 2em; /* Adjust margin for reversed layout */
         margin-right: 0; /* Remove right margin */
@@ -89,6 +107,13 @@
   box-shadow: 0 2px 10px rgba(0, 0, 0, 0.05);
   transition: transform 0.3s ease;
 
+  @media (max-width: $on-palm) {
+    flex-direction: column; /* Stack image and text for smaller screens */
+    align-items: center; /* Center items horizontally within the column layout */
+    text-align: center; /* Center text for smaller screens */
+  }
+
+
   &:hover {
     transform: translateY(-5px);
   }
@@ -101,7 +126,15 @@
     margin-right: 4em;
     margin-left: 0em;
     flex-shrink: 0;
-  }
+    margin-bottom: 0;
+    @media (max-width: $on-palm) {
+        width: 100%;
+        height: auto;
+        margin-right: 0;
+        margin-left: 0;
+        margin-bottom: 1em; // Add bottom margin for spacing
+        }
+   }
 
   .project-text {
     flex: 1;

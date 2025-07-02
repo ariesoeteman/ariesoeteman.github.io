@@ -3,20 +3,27 @@
   justify-content: center;
   align-items: center;
   text-align: center;
-  padding: 2em 1em;
-  min-height: 87vh;
+  padding: 2em 0em;
+  // padding: 100px;
+  min-height: 90vh;
   width: 100vw;
   margin-left: calc(-50vw + 50%); // ← KEY for full-bleed inside a centered layout
+
   overflow-x: hidden;
   background-color: $hero-bg-color;
 
-  @include media-query($on-palm) {
-    margin-right: auto;
-  }
-//   @media (prefers-color-scheme: dark) {
+  //   @media (prefers-color-scheme: dark) {
 //   background-color: $body-bg-dark;
 //  }
 }
+
+@media (max-width: $on-palm) {
+  .hero-section {
+    padding-top: 3em; // or less
+    min-height: auto;   // override any tall default
+  }
+}
+
 
 .hero-content {
   max-width: 800px;
@@ -38,6 +45,11 @@
   // text-transform: uppercase;
   letter-spacing: 1px;
   margin: 0;
+
+  @media (max-width: $on-palm) {
+   
+  }
+
 
   @include media-query($on-palm) {
     font-size: 2em;

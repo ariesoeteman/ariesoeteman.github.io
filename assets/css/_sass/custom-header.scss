@@ -1,31 +1,11 @@
-// .custom-site-header {
-//   width: 95vw;
-//   max-width: 95vw;
-//   margin-left: calc(-50vw + 50%);
-//   padding: 1rem 2rem;
-//   background: #f8f8f8;
-//   position: sticky;
-//   // background-color: lighten($body-bg, 5%);
-
-//   border-bottom: 1px solid #ccc;
-
-//   display: flex;
-//   justify-content: center;
-
-//   // Fix horizontal scrollbar
-//   overflow-x: hidden;
-// }
-
 .custom-site-header {
   position: fixed;
   top: 0;
   left: 0;
-  width: 100%;
   z-index: 1000;
 
   background: $nav-bg-color;
   width: 100vw;
-  max-width: 100vw;
   margin-left: calc(-50vw + 50%);
 
   border-bottom: 1px solid #ddd;
@@ -35,6 +15,7 @@
   display: flex;
   justify-content: center;
   overflow-x: hidden;
+  z-index: 1000;
 }
 
 .custom-header-content {
@@ -51,6 +32,7 @@
   flex-direction: column; // default for mobile
   gap: 1rem;
   
+
   @include media-query($on-palm) {
     flex-direction: row; // side-by-side on larger screens
   }
@@ -63,6 +45,7 @@
   font-family: $header-font-family;
   font-size: 2.1rem;
   margin: 0;
+
   &:hover {
     color: darkgreen !important; // Ensure color stays dark green on hover
   }
@@ -112,5 +95,71 @@
     text-decoration: underline;
     color: $nav-text-color;
     // color: darkgreen;
+  }
+}
+
+
+@media (max-width: $on-palm) {
+    .custom-site-header {
+    position: static;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    margin-left: calc(-50vw + 50%);
+    padding: 1rem 1rem;
+    z-index: 1000;
+    background: $nav-bg-color;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    box-sizing: border-box;
+  }
+  // .custom-site-header {
+  //   width: 100%;          // Use full container width instead of 100vw (avoid horizontal scroll)
+  //   margin-left: calc(-50vw + 50%);
+  //   top: 0;
+  //   left: 0;
+  //   // margin-left: calc(-50vw + 50%);
+  //   // padding: 0.75rem 1rem; // Reduce padding for small screens
+  //   flex-wrap: wrap;      // Allow wrapping inside header for narrow width
+  //   justify-content: space-between; // spread content nicely
+  //   position: static;
+  //   margin: 0;
+  //   padding: 0;
+
+  //   display: flex;
+  //   flex-wrap: wrap;    
+  // }
+
+  .custom-header-content {
+    width: 100%;          // Use full width inside header
+    max-width: none;      // Remove max-width restriction
+    padding-left: 1rem;   // Add some horizontal padding
+    padding-right: 1rem;
+    flex-direction: column; // Stack vertically on phone
+    gap: 0.75rem;         // Slightly smaller gap
+  }
+
+  .custom-site-title {
+    padding-left: 0;      // Remove large left padding
+    font-size: 1.6rem;    // Scale font smaller for small screens
+    text-align: center;   // Center the title
+    width: 100%;          // Full width for centering
+  }
+
+  .custom-site-nav {
+    margin-left: 0;
+    width: 100%;          // Nav takes full width
+    ul {
+      flex-direction: column;   // Stack nav links vertically
+      gap: 0.75rem;             // Smaller gaps between links
+      justify-content: center;  // Center nav links
+      align-items: center;
+      margin: 0;
+    }
+  }
+
+  .custom-site-nav a {
+    font-size: 1.4rem;   // Smaller font size for nav links
   }
 }
