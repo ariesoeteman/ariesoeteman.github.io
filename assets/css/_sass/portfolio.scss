@@ -80,14 +80,23 @@
 
 .project-item.reverse {
   flex-direction: row-reverse; /* Reverse the order of image and text */
-  @media (max-width: $on-palm) {
-    flex-direction: column; /* Stack image and text for smaller screens */
-    align-items: center; /* Center items horizontally within the column layout */
-    text-align: center; /* Center text for smaller screens */
-  }
     img {
         margin-left: 2em; /* Adjust margin for reversed layout */
         margin-right: 0; /* Remove right margin */
+    }
+}
+@media (max-width: $on-palm) {
+    .project-item.reverse {
+        flex-direction: column; /* Stack image and text for smaller screens */
+        align-items: center; /* Center items horizontally within the column layout */
+        text-align: center; /* Center text for smaller screens */
+        flex-wrap: wrap;
+        padding: 1em 0.5em;
+
+        img {
+            margin-left: 0; /* Remove left margin */
+            margin-right: 0; /* Adjust right margin for reversed layout */
+        }
     }
 }
 
@@ -111,6 +120,8 @@
     flex-direction: column; /* Stack image and text for smaller screens */
     align-items: center; /* Center items horizontally within the column layout */
     text-align: center; /* Center text for smaller screens */
+    flex-wrap: wrap;
+    padding: 1em 0.5em;
   }
 
 
@@ -133,6 +144,7 @@
         margin-right: 0;
         margin-left: 0;
         margin-bottom: 1em; // Add bottom margin for spacing
+        display: block;
         }
    }
 
