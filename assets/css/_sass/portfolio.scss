@@ -14,7 +14,7 @@
   min-height: 70vh;
 
   // Optional: fix horizontal scroll bar if needed
-  overflow-x: hidden;
+//   overflow-x: hidden;
   // Background colors as previously defined
   background-color: $portfolio-bg-color;
 //   @media (prefers-color-scheme: dark) {
@@ -94,8 +94,10 @@
         padding: 1em 0.5em;
 
         img {
+            min-width: 0;
             margin-left: 0; /* Remove left margin */
             margin-right: 0; /* Adjust right margin for reversed layout */
+            box-sizing: border-box; /* Ensure padding doesn't affect width */
         }
     }
 }
@@ -138,12 +140,14 @@
     margin-left: 0em;
     flex-shrink: 0;
     margin-bottom: 0;
+    min-width: 0;
     @media (max-width: $on-palm) {
         width: 95%;
         height: auto;
         margin-right: 0;
         margin-left: 0;
         margin-bottom: 1em; // Add bottom margin for spacing
+        box-sizing: border-box; /* Ensure padding doesn't affect width */
         display: block;
         }
    }
