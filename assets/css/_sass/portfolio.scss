@@ -158,6 +158,10 @@
     margin-left: 3em;
     font-family: $base-font-family;
 
+    @media (max-width: $on-palm) {
+      margin-left: 0.4em; /* Remove left margin */
+    }
+
     h3 {
       font-size: 1.1em;
       color: $text-color;
