@@ -91,7 +91,7 @@
         align-items: center; /* Center items horizontally within the column layout */
         text-align: center; /* Center text for smaller screens */
         flex-wrap: wrap;
-        padding: 1em 0.5em;
+        padding: 1em 1em;
 
         img {
             width: 95%;
@@ -101,6 +101,7 @@
             margin-bottom: 1em; // Add bottom margin for spacing
             box-sizing: border-box; /* Ensure padding doesn't affect width */
             display: block;
+            object-fit: cover; /* Ensure image covers the area without distortion */
         }
     }
 }
@@ -126,7 +127,7 @@
     align-items: center; /* Center items horizontally within the column layout */
     text-align: center; /* Center text for smaller screens */
     flex-wrap: wrap;
-    padding: 1em 0.5em;
+    padding: 1em 1em;
   }
 
 
@@ -152,6 +153,7 @@
         margin-bottom: 1em; // Add bottom margin for spacing
         box-sizing: border-box; /* Ensure padding doesn't affect width */
         display: block;
+        object-fit: cover; /* Ensure image covers the area without distortion */
         }
    }
 
