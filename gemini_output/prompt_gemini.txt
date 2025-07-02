@@ -1,35 +1,152 @@
 --- User Task ---
-make cleaner
+You are an expert in modern, professional academic website design using Jekyll. I need a new HTML structure for my main layout ().
+  Based on my current  (provided below), create a clean, responsive HTML5 structure suitable for an academic personal page.
+
+  Key requirements:
+  -   **Header:** A clean, sticky header. On the left, display 'Arie Soeteman' (using ). On the right, have navigation links for 'Home', 'Research', 'Publications', 'Teaching', 'Projects', 'About', and 'Contact'.
+  -   **First Screen (Hero Section):** A prominent 'hero' section immediately below the header. This section should be designed to take up the initial viewport, have a distinct background color (to be handled by CSS), include a placeholder for a professional picture (e.g., ), and a concise welcome text (using  or ).
+  -   **Second Section (Introduction):** Immediately below the hero section, create a separate 'introduction' section. This section should have a different background color (also CSS-handled) and be designed for more detailed introductory text about your work or research.
+  -   **Main Content:** Ensure there's a clear area () where individual page content will render.
+  -   **Footer:** A clean footer with copyright and social links.
+
+  **Important:**
+  -   Use semantic HTML5 tags (e.g., , , , , ).
+  -   Ensure the structure supports full responsiveness.
+  -   Keep existing Jekyll Liquid tags for , , , , , , , , , , , if they are still relevant.
+  -   For navigation, assume it will be hardcoded in the layout for now, or use a simple Liquid loop if that makes sense for the structure.
+  -   Do not include any CSS; focus solely on the HTML structure.
+  -   Output only the HTML code block.
+
+  Here's my current  for context:
+  ```html
+  ---
+# layout: compress
+---
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <meta content="width=device-width, initial-scale=1" name="viewport">
+    <link rel="stylesheet" href="{{site.baseurl}}/assets/css/main.css">
+
+    <title>{{page.title}}</title>
+    <meta name="description" content="{{ page.description | default: site.description }}">
+    <h1 class="post-headline">{{site.title}}</h1>
+    <h3 class="post-description">{{site.description}}</h3>
+    <h3 class="post-description"><a href="https://www.fermioniq.com/">{{site.affiliation}}</a></h3>
+
+    {% include navigation.html %}
+
+    {% seo %}
+
+    {% include favicon.html %}
+
+    {% include mathjax.html %}
+
+    <!-- Load fontawesome here for faster loadtimes: https://stackoverflow.com/a/35880730/9523246 -->
+    <script
+        type="text/javascript"> (function () { var css = document.createElement('link'); css.href = 'https://use.fontawesome.com/releases/v5.11.0/css/all.css'; css.rel = 'stylesheet'; css.type = 'text/css'; document.getElementsByTagName('head')[0].appendChild(css); })(); </script>
+</head>
+
+<body>
+    <main>
+        <article>
+            {{ content }}
+        </article>
+    </main>
+
+    <footer>
+        <p class="copy">
+            <small> &copy; {{site.title}} {{ site.time | date: '%Y' }}
+                | Powered by Jekyll and
+                <a target="_blank" href="https://github.com/jitinnair1/gradfolio/">Gradfolio</a>.
+                Last updated on {{ site.time | date_to_long_string }}
+            </small>
+        </p>
+
+        {% include social-footer.html %}
+
+    </footer>
+
+    {% include analytics.html %}
+
+</body>
+
+</html>
+  ```
+  
 
 --- Repo-Level Instruction ---
 You are provided with context from multiple files in the repository. Analyze the repository as a whole, considering relationships between files, overall architecture, and cross-file dependencies. When generating the target file, ensure it integrates correctly with the rest of the repository. If relevant, reference or utilize patterns, classes, or functions defined in other files. Do not simply summarize individual files; reason at the repository level.
 
 --- Repository Context ---
-Repository Name: _posts
+Repository Name: personal_webpage
 
 --- File Context ---
 
-### File: _posts/2020-04-03-modellingsystematicity.md
+### File: _layouts/default.html
 ```
 ---
-layout: post
-title: Modelling Form-Meaning Systematicity with Linguistic and Visual Features
+# layout: compress
 ---
+<!DOCTYPE html>
+<html>
 
-Several studies in linguistics and natural language processing (NLP) pointed out systematic correspondences between word form and meaning in language. A prominent example of such systematicity is iconicity, which occurs when the form of a word is motivated by some perceptual (e.g. visual) aspect of its referent. However, the existing data-driven approaches to form-meaning systematicity modelled word meanings relying on information extracted from textual data alone. In this paper, we investigate to what extent our visual experience explains some of the form-meaning systematicity found in language. We construct word meaning representations from linguistic as well as visual data and analyze the structure and significance of form-meaning systematicity found in English using these models. Our findings corroborate the existence of form-meaning systematicity and show that this systematicity is concentrated in localized clusters. Furthermore, applying a multimodal approach allows us to identify new patterns of systematicity that have not been previously identified with the text-based models.
+<head>
+    <meta charset="utf-8">
+    <meta content="width=device-width, initial-scale=1" name="viewport">
+    <link rel="stylesheet" href="{{site.baseurl}}/assets/css/main.css">
 
-by Arie Soeteman, Erik Dario Gutierrez, Elia Bruni & Ekaterina Shutova
+    <title>{{page.title}}</title>
+    <meta name="description" content="{{ page.description | default: site.description }}">
+    <h1 class="post-headline">{{site.title}}</h1>
+    <h3 class="post-description">{{site.description}}</h3>
+    <h3 class="post-description"><a href="https://www.fermioniq.com/">{{site.affiliation}}</a></h3>
 
-[https://ojs.aaai.org/index.php/AAAI/article/view/6416](https://ojs.aaai.org/index.php/AAAI/article/view/6416)
+    {% include navigation.html %}
 
-I presented this work at AAAI 2020
+    {% seo %}
 
-<a href="AAAI_slides.pdf" download>Slides</a>
+    {% include favicon.html %}
+
+    {% include mathjax.html %}
+
+    <!-- Load fontawesome here for faster loadtimes: https://stackoverflow.com/a/35880730/9523246 -->
+    <script
+        type="text/javascript"> (function () { var css = document.createElement('link'); css.href = 'https://use.fontawesome.com/releases/v5.11.0/css/all.css'; css.rel = 'stylesheet'; css.type = 'text/css'; document.getElementsByTagName('head')[0].appendChild(css); })(); </script>
+</head>
+
+<body>
+    <main>
+        <article>
+            {{ content }}
+        </article>
+    </main>
+
+    <footer>
+        <p class="copy">
+            <small> &copy; {{site.title}} {{ site.time | date: '%Y' }}
+                | Powered by Jekyll and
+                <a target="_blank" href="https://github.com/jitinnair1/gradfolio/">Gradfolio</a>.
+                Last updated on {{ site.time | date_to_long_string }}
+            </small>
+        </p>
+
+        {% include social-footer.html %}
+
+    </footer>
+
+    {% include analytics.html %}
+
+</body>
+
+</html>
 ```
 
 --- End File Context ---
 
 --- Generation Target ---
-Generate the complete content for the file: gemini_output.txt
+Generate the complete content for the file: _layouts/new_default.html
 
 --- Output ---
