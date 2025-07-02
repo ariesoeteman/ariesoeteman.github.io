@@ -1,0 +1,116 @@
+// .custom-site-header {
+//   width: 95vw;
+//   max-width: 95vw;
+//   margin-left: calc(-50vw + 50%);
+//   padding: 1rem 2rem;
+//   background: #f8f8f8;
+//   position: sticky;
+//   // background-color: lighten($body-bg, 5%);
+
+//   border-bottom: 1px solid #ccc;
+
+//   display: flex;
+//   justify-content: center;
+
+//   // Fix horizontal scrollbar
+//   overflow-x: hidden;
+// }
+
+.custom-site-header {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  z-index: 1000;
+
+  background: $nav-bg-color;
+  width: 100vw;
+  max-width: 100vw;
+  margin-left: calc(-50vw + 50%);
+
+  border-bottom: 1px solid #ddd;
+  padding: 1rem 2rem;
+  padding-top: 20px; // match your header height
+
+  display: flex;
+  justify-content: center;
+  overflow-x: hidden;
+}
+
+.custom-header-content {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+
+  width: 90%;
+  max-width: $content-width;
+  // padding: 0 1rem;
+  padding-left: 0rem;
+  padding-right: 10rem;
+
+  flex-direction: column; // default for mobile
+  gap: 1rem;
+  
+  @include media-query($on-palm) {
+    flex-direction: row; // side-by-side on larger screens
+  }
+}
+
+.custom-site-title {
+  padding-left: 6rem; // or 1rem for more space
+  color: darkgreen;
+  font-weight: bold;
+  font-family: $header-font-family;
+  font-size: 2.1rem;
+  margin: 0;
+  &:hover {
+    color: darkgreen !important; // Ensure color stays dark green on hover
+  }
+ a {
+    color: $nav-text-color;
+    text-decoration: none;
+
+    &:hover {
+      text-decoration: underline;
+      color: $nav-text-color;
+    }
+
+    &:visited {
+      color: $nav-text-color;
+    }
+  }
+
+}
+
+.custom-site-nav {
+  margin-left: auto;
+
+  ul {
+    list-style: none;
+    display: flex;
+    gap: 1.5rem;
+    margin: 0;
+    padding: 0;
+    justify-content: center;
+
+    @include media-query($on-palm) {
+      justify-content: flex-end;
+    }
+  }
+ }
+
+.custom-site-nav a {
+  margin-left: auto;
+  font-family: $header-font-family;
+  text-decoration: none;
+  color: $nav-text-color;
+  font-weight: normal;
+  font-size: 1.8rem;
+  // text-transform: uppercase;
+
+  &:hover {
+    text-decoration: underline;
+    color: $nav-text-color;
+    // color: darkgreen;
+  }
+}

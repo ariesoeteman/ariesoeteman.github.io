@@ -1,0 +1,81 @@
+```html
+---
+layout: compress
+---
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="{{site.baseurl}}/assets/css/main.css">
+    <title>{{ page.title | default: site.title }}</title>
+    <meta name="description" content="{{ page.description | default: site.description }}">
+    {% seo %}
+    {% include favicon.html %}
+    {% include mathjax.html %}
+    <script type="text/javascript"> (function () { var css = document.createElement('link'); css.href = 'https://use.fontawesome.com/releases/v5.11.0/css/all.css'; css.rel = 'stylesheet'; css.type = 'text/css'; document.getElementsByTagName('head')[0].appendChild(css); })(); </script>
+
+</head>
+<body>
+    <header class="sticky-top">
+        <div class="container">
+            <nav class="navbar navbar-expand-lg navbar-light">
+                <a class="navbar-brand" href="/">Arie Soeteman</a>
+                <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="collapse navbar-collapse" id="navbarNav">
+                    <ul class="navbar-nav ml-auto">
+                        <li class="nav-item"><a class="nav-link" href="/">Home</a></li>
+                        <li class="nav-item"><a class="nav-link" href="/research">Research</a></li>
+                        <li class="nav-item"><a class="nav-link" href="/publications">Publications</a></li>
+                        <li class="nav-item"><a class="nav-link" href="/teaching">Teaching</a></li>
+                        <li class="nav-item"><a class="nav-link" href="/projects">Projects</a></li>
+                        <li class="nav-item"><a class="nav-link" href="/about">About</a></li>
+                        <li class="nav-item"><a class="nav-link" href="/contact">Contact</a></li>
+                    </ul>
+                </div>
+            </nav>
+        </div>
+    </header>
+
+    <section id="hero">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-6">
+                    <img src="/assets/images/profile.jpg" alt="Profile Picture" class="img-fluid rounded-circle">
+                </div>
+                <div class="col-md-6">
+                    <h1>Welcome!</h1>
+                    <p>A concise welcome message goes here.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="introduction">
+        <div class="container">
+            <h2>Introduction</h2>
+            <p>This section provides a more detailed introduction to my work and research.  You can add more text here to describe your academic background, research interests, and goals.</p>
+        </div>
+    </section>
+
+    <main class="container">
+        <article>
+            {{ content }}
+        </article>
+    </main>
+
+    <footer>
+        <div class="container">
+            <p class="copy">
+                <small> &copy; {{site.title}} {{ site.time | date: '%Y' }} | Powered by Jekyll and <a target="_blank" href="https://github.com/jitinnair1/gradfolio/">Gradfolio</a>. Last updated on {{ site.time | date_to_long_string }}</small>
+            </p>
+            {% include social-footer.html %}
+        </div>
+    </footer>
+
+    {% include analytics.html %}
+</body>
+</html>
+```

@@ -1,0 +1,172 @@
+.portfolio-section {
+  display: flex;
+  align-items: center; /* Vertically align items in the center */
+  justify-content: center; /* Horizontally center content for smaller screens */
+  flex-direction: column; /* Stack items vertically on small screens */
+  padding: 2em 1em; /* Padding for the entire section */
+  min-height: 70vh; /* Ensure it takes up a good portion of the viewport */
+  width: 100vw;
+  margin-left: calc(-50vw + 50%); // ← KEY for full-bleed inside a centered layout
+  min-height: 70vh;
+
+  // Optional: fix horizontal scroll bar if needed
+  overflow-x: hidden;
+  // Background colors as previously defined
+  background-color: $portfolio-bg-color;
+//   @media (prefers-color-scheme: dark) {
+//     background-color: darken($body-bg-dark, 5%);
+//   }
+
+  @include media-query($on-palm) {
+    align-items: flex-start;
+    justify-content: flex-start;
+    text-align: left;
+
+    // Make sure it aligns to the left
+    margin-right: auto;
+  }
+}
+
+.portfolio-content {
+  display: flex;
+  flex-direction: column; /* Stack image and text for smaller screens */
+  align-items: center; /* Center items horizontally within the column layout */
+  gap: 2em;
+  margin: 0 auto; /* Center the block itself on smaller screens (when flex-direction is column) */
+  width: 90%; /* Ensure it takes available width up to max-width */
+  max-width: $content-width+50px; // or $content-width, if defined
+
+  @include media-query($on-palm) {
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: center; // ← Center image+text together
+    text-align: left;
+    gap: 5vw; // Scales with screen width; try 3vw–5vw  
+  }
+}
+.portfolio-header {
+  font-size: 2em;
+  margin-bottom: -1.5em;
+  color: $portfolio-header-color;
+  text-align: left;
+}
+
+.project-list {
+  display: flex;
+  flex-direction: column;
+  gap: 3em;
+  margin-bottom: 4em;
+}
+
+.project-item.reverse {
+  flex-direction: row-reverse; /* Reverse the order of image and text */
+
+    img {
+        margin-left: 2em; /* Adjust margin for reversed layout */
+        margin-right: 0; /* Remove right margin */
+    }
+}
+
+.project-link-wrapper {
+    display: block;
+    text-decoration: none;
+    color: inherit; /* Inherit color from parent */
+}
+
+.project-item {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  background: $portfolio-item-color;
+  border-radius: 12px;
+  padding: 1.5em;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.05);
+  transition: transform 0.3s ease;
+
+  &:hover {
+    transform: translateY(-5px);
+  }
+
+  img {
+    width: 280px;
+    height: auto;
+    border-radius: 8px;
+    object-fit: cover;
+    margin-right: 4em;
+    margin-left: 0em;
+    flex-shrink: 0;
+  }
+
+  .project-text {
+    flex: 1;
+    text-align: left;
+    margin-left: 3em;
+    font-family: $base-font-family;
+
+    h3 {
+      font-size: 1.1em;
+      color: $text-color;
+      margin: 0em 0em -0.2em 0; // Only bottom margin — this controls spacing between paragraphs
+    }
+    h4 {
+        font-size: 1em;
+    }
+    h5 {
+        font-size: 1em;
+    }
+
+    p {
+      font-size: 1.1em;
+      line-height: 1.6;
+      color: $text-color;
+    }
+  
+    .project-author {
+    font-size: 1.1em;
+    font-weight: 400;
+    color: lighten($text-color, 25%);
+    margin: 0.1em 0 0em 0;
+    }
+    
+    .project-links {
+    float: right;
+    margin-top: 0.3em;
+    margin-right: 1.6em;
+   
+    .project-button {
+        padding: 0.3em 0.8em;
+        font-size: 0.85em;
+        background-color: $portfolio-button-color;
+        color: black;
+        border-radius: 4px;
+        margin-left: 0.5em;
+        text-decoration: none;
+        white-space: nowrap;
+        transition: background-color 0.2s ease;
+
+        &:hover {
+        background-color: darken($brand-color, 10%);
+        }
+    }
+  }
+
+  .project-venue {
+    font-size: 1.1em;
+    font-weight: 400;
+    color: lighten($text-color, 35%);
+    margin-bottom: -0.2em;
+  }
+  }
+
+  @include media-query($on-palm) {
+    img {
+      margin-right: 0;
+      margin-bottom: 1em;
+      width: 20%;
+    }
+
+    .project-text {
+      text-align: left;
+    }
+  }
+}

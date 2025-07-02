@@ -1,17 +1,71 @@
-$base-font-family: 'Work Sans', sans-serif;
-$base-font-size:   20px;
+// $base-font-family: 'Courier New', Courier, monospace;
+$base-font-family: "IBM Plex Serif",serif;
+$header-font-family: "Inter";
+// $header-font-family: ui-sans-serif, system-ui, sans-serif;
+
+
+$base-font-size: 20px;
 $base-font-weight: 400;
-$small-font-size:  $base-font-size * 0.875;
+$small-font-size: $base-font-size * 0.875;
 $base-line-height: 1.7;
 
-$spacing-unit:     30px;
+$spacing-unit: 30px;
+$green: #025928;
+//  $yellow: #F2CC0C;
+$blue: #044D8C;
+$almost-white: #F2F0EF;
+$brown: #BF8034;
+$pink: #F4B6C2;
+$delft-blue: #273469;
+$burgundy: #721121;
+
+$almost-white: #fbfbfb;
+$lavender-blush: #F8E9E9;
+$yellow:#FFC622;
+$whiter-blush: lighten($lavender-blush, 6%);
+
+// $nav-text-color: $almost-white;
+$nav-text-color: white;
+$nav-bg-color: $green;
+
+$hero-bg-color: $lavender-blush;
+
+// $hero-bg-color: $delft-blue;
+// $hero-bg-color: lighten($yellow, 40%);
+$hero-heading-color: $green;
+$institution-link-color: #0b57d0;
+
+$institution-link-color: $green; 
+
+// $about-bg-color: white;
+$about-bg-color: $whiter-blush;
+
+// $about-bg-color: lighten($yellow, 10%);
+// $about-bg-color: $delft-blue;
+// $about-bg-color: white;
+
+$about-heading-color: white;
+$about-text-color: white;
+
+$about-heading-color: $green;
+$about-text-color: black;
+
+
+
+$portfolio-bg-color: $lavender-blush;
+$portfolio-item-color: $whiter-blush;
+$portfolio-header-color: $green;
+$portfolio-button-color: $lavender-blush;
+
+
 $light-gray: gray;
-$text-color:       #333;
+$text-color: #333;
 // $background-color: #fdfdfd;
 $background-color: #FAFAD2;
 // $brand-color:      #60c17d;
-$brand-color:      darkolivegreen;
-$projectbox-text:  #1e2126;
+// $brand-color: darkolivegreen;
+$brand-color: $green;
+$projectbox-text: #1e2126;
 
 // Color scheme for light
 // $body-bg: #fdfdfd;

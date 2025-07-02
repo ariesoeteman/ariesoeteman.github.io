@@ -1,7 +1,12 @@
 /* Social Icons for Footer from https://codepen.io/deutschland2k/pen/qKpdJX */
 
 .rounded-social-buttons {
-  text-align: center;
+  display: flex;       /* make flex container */
+  gap: 0.25rem;        /* spacing between buttons, matching your margin */
+  flex-wrap: nowrap;   /* optional: prevent wrapping, or allow with 'wrap' */
+  justify-content: center;  /* center horizontally */
+  align-items: center; /* vertically center buttons */
+  text-align: center;  /* keep text-align for fallback */
 }
 
 .rounded-social-buttons .social-button {
@@ -43,9 +48,38 @@
   font-size: 25px;
 }
 
+.rounded-social-buttons .ai {
+  font-size: 25px;
+}
+
 .rounded-social-buttons .social-button.facebook {
   background: #3b5998;
 }
+
+
+.rounded-social-buttons .social-button.scholar {
+  background: #4285f4; // Google blue
+  // color: #fff; /* white icon on blue background */
+}
+
+.rounded-social-buttons .social-button.bluesky {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: #1fb6ff; // or the official Bluesky blue (#1fb6ff or #09f)
+}
+
+.rounded-social-buttons .social-button.bluesky:hover,
+.rounded-social-buttons .social-button.bluesky:focus {
+  background: #0c8ddb;
+  color: white;
+}
+.rounded-social-buttons .social-button.bluesky img.social-icon {
+  width: 24px;
+  height: 24px;
+}
+
+
 
 .rounded-social-buttons .social-button.facebook:hover, .rounded-social-buttons .social-button.facebook:focus {
   color: #3b5998;

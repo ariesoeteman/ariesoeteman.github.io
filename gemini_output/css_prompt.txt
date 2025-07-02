@@ -1,0 +1,15 @@
+gemini-repo-cli personal_webpage assets/css/style.scss \
+  "Based on the following `_layouts/new_default.html` structure, generate a comprehensive SCSS stylesheet (`assets/css/style.scss`) for a modern, minimalist, and professional academic website.
+  - Use a professional but vibrant color palette (e.g., green, whites, a subtle brown or black).
+  - Implement clean, readable typography (suggest fonts like Inter, Roboto, or open-source alternatives).
+  - Ensure full responsiveness for desktop, tablet, and mobile, using a mobile-first approach.
+  - Style the header (sticky), navigation, hero section, main content area, recent posts/projects sections, and footer.
+  - Provide basic styling for common elements like links, buttons, and headings.
+  Output only the SCSS code block.
+
+  Here is the HTML layout:
+  ```html
+  $(cat gemini_output/_layouts/new_default.html)"
+--files gemini_output/_layouts/new_default.html assets/css/main.scss
+--gemini-model gemini-1.5-flash
+--output gemini_output/assets/css/style.scss

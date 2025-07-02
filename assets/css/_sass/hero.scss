@@ -1,0 +1,101 @@
+.hero-section {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  padding: 2em 1em;
+  min-height: 87vh;
+  width: 100vw;
+  margin-left: calc(-50vw + 50%); // ← KEY for full-bleed inside a centered layout
+  overflow-x: hidden;
+  background-color: $hero-bg-color;
+
+  @include media-query($on-palm) {
+    margin-right: auto;
+  }
+//   @media (prefers-color-scheme: dark) {
+//   background-color: $body-bg-dark;
+//  }
+}
+
+.hero-content {
+  max-width: 800px;
+  display: flex;
+  flex-direction: column;
+  align-items: center; /* 👈 this centers child elements horizontally */
+  text-align: center;
+  gap: 1.5em;
+  margin: 0 auto; /* Center the block itself on smaller screens (when flex-direction is column) */
+  width: 90%; /* Ensure it takes available width up to max-width */
+}
+
+
+.welcome-heading {
+  font-family: $header-font-family;
+  font-size: 1.5em;
+  font-weight: 700;
+  color: $hero-heading-color; // dark green
+  // text-transform: uppercase;
+  letter-spacing: 1px;
+  margin: 0;
+
+  @include media-query($on-palm) {
+    font-size: 2em;
+  }
+
+  @include media-query($on-laptop) {
+    font-size: 2.1em;
+  }
+}
+
+.welcome-subtext {
+  font-family: $base-font-family; // clean typewriter style
+  font-size: 1em;
+  color: #000;
+  margin: 0;
+  line-height: 1.65;
+
+
+  @include media-query($on-palm) {
+    font-size: 1.3em;
+  }
+
+  .institution-link {
+  color: $institution-link-color !important;
+  text-decoration: none !important;
+  background: none !important;
+  font-weight: 500;
+  background: none !important;
+  transition: none !important;  /* disable any background transition */
+
+  &:hover {
+  box-shadow: none !important;
+  text-decoration: underline !important;
+  }
+  }
+}
+
+.welcome-heading, .welcome-subtext {
+  opacity: 0;
+  transform: translateY(10px);
+  animation: fadeInUp 0.6s ease forwards;
+}
+
+.welcome-subtext {
+  animation-delay: 0.2s;
+}
+
+@keyframes fadeInUp {
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.welcome-text {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  gap: 0.9em; // space between header and subtext
+}

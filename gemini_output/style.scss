@@ -1,0 +1,193 @@
+```scss
+@charset "utf-8";
+
+// Import variables and mixins (if any) from other files.
+@import "variables"; // Assuming you have a _variables.scss file
+
+// Typography
+$font-primary: 'Inter', sans-serif; // Or Roboto, Open Sans, etc.
+$font-secondary: 'Merriweather', serif; // Or a suitable serif font
+
+body {
+  font-family: $font-primary;
+  line-height: 1.6;
+  margin: 0;
+  color: $color-text-primary; // From your _variables.scss
+  background-color: $color-background-primary;
+}
+
+// Header
+header {
+  background-color: $color-background-secondary; // Slightly darker background
+  padding: 1rem 0;
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+
+  nav ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    text-align: center; // Center the navigation items
+
+    li {
+      display: inline-block;
+      margin: 0 1rem;
+
+      a {
+        text-decoration: none;
+        color: $color-text-secondary; // Lighter text color
+        font-weight: 500;
+        transition: color 0.3s ease;
+
+        &:hover {
+          color: $color-accent; // Your accent color (e.g., vibrant green)
+        }
+      }
+    }
+  }
+
+  @include media-query($on-phone) { // Adjust for smaller screens
+    nav ul {
+      text-align: left;
+      li {
+        display: block;
+        margin: 0.5rem 0;
+      }
+    }
+  }
+}
+
+// Hero Section
+#hero {
+  background-color: $color-background-primary;
+  padding: 4rem 0;
+  text-align: center;
+
+  .hero-content {
+    max-width: 800px;
+    margin: 0 auto;
+
+    h1 {
+      font-size: 2.5rem;
+      font-weight: 700;
+      margin-bottom: 1rem;
+    }
+
+    p {
+      font-size: 1.1rem;
+      margin-bottom: 1.5rem;
+    }
+
+    a {
+      color: $color-accent;
+      text-decoration: underline;
+    }
+  }
+}
+
+// Main Content
+main {
+  padding: 2rem;
+  max-width: $content-width;
+  margin: 0 auto;
+
+  article {
+    // Style for main content articles
+  }
+
+  #recent-posts, #featured-research {
+    margin-bottom: 3rem;
+    h2 {
+      font-size: 1.8rem;
+      margin-bottom: 1rem;
+    }
+  }
+}
+
+// Footer
+footer {
+  background-color: $color-background-secondary;
+  padding: 2rem 0;
+  text-align: center;
+
+  .copy {
+    margin-bottom: 1rem;
+  }
+
+  .social-links {
+    a {
+      margin: 0 0.5rem;
+      color: $color-text-secondary;
+      font-size: 1.2rem;
+      transition: color 0.3s ease;
+
+      &:hover {
+        color: $color-accent;
+      }
+    }
+  }
+}
+
+// Buttons (example)
+button {
+  background-color: $color-accent;
+  color: white;
+  padding: 0.8rem 1.5rem;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+
+  &:hover {
+    background-color: darken($color-accent, 10%);
+  }
+}
+
+// Headings
+h1, h2, h3, h4, h5, h6 {
+  font-family: $font-primary;
+  font-weight: 700;
+  margin-bottom: 0.5rem;
+}
+
+h1 {
+  font-size: 2.5rem;
+}
+
+h2 {
+  font-size: 2rem;
+}
+
+// Links
+a {
+  color: $color-accent;
+  text-decoration: none;
+  transition: color 0.3s ease;
+
+  &:hover {
+    text-decoration: underline;
+  }
+}
+
+
+// Responsive adjustments (add more as needed)
+@include media-query($on-palm) {
+  main {
+    padding: 1.5rem;
+  }
+}
+
+@include media-query($on-phone) {
+  #hero {
+    padding: 2rem 0;
+  }
+  #hero h1 {
+    font-size: 2rem;
+  }
+  #hero p {
+    font-size: 1rem;
+  }
+}
+```

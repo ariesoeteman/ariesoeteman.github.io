@@ -1,2 +1,3 @@
 User-agent: *
 Allow: /
+Sitemap: https://ariesoeteman.github.io/sitemap.xml

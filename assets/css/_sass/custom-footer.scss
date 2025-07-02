@@ -1,0 +1,45 @@
+.custom-site-footer{
+    width: 100vw; // Full viewport width
+    margin-left: calc(-50vw + 50%); // Center inside centered layout
+    background-color: $nav-bg-color;
+    padding-top: 2rem;
+    margin-top: 0rem;
+    border-top: solid 1px black;
+ 
+    display: flex;
+    justify-content: center;
+    overflow-x: hidden;
+
+    @include large {
+        font-size: 1rem;
+    }
+
+    @include medium {
+        font-size: 1rem;
+    }
+
+    @include small {
+        font-size: 0.9rem;
+    }
+}
+
+.custom-footer-content {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+
+  width: 100%;
+  max-width: 1000px;
+  // padding: 0 1rem;
+  padding-left: 0rem;
+  padding-right: 10rem;
+  color: $nav-text-color;
+
+  flex-direction: column; // default for mobile
+  gap: 1rem;
+  font-size: 1.5rem;
+  
+  @include media-query($on-palm) {
+    flex-direction: row; // side-by-side on larger screens
+  }
+}

@@ -1,0 +1,62 @@
+<section id = "about" class ="about-section">
+    <div class="about-content">
+    
+    <div class="about-image-block">
+            <img class="about-image" src="{{ site.baseurl }}/assets/images/arie.jpg" alt="Arie Soeteman">
+
+        <div class="about-social-footer">
+        <div class="rounded-social-buttons">
+
+        <a title="{{ _locale_string_follow | replace: '[NAME]', 'LinkedIn' }}"
+        class="social-button linkedin"
+        href="https://www.linkedin.com/in/arie-soeteman" itemprop="sameAs"
+        target="_blank">
+        <i class="fab fa-linkedin"></i>
+        </a>
+     
+        <a title="{{ _locale_string_follow | replace: '[NAME]', 'GitHub' }}"
+        class="social-button github"
+        href="https://www.github.com/ariesoeteman" itemprop="sameAs"
+        target="_blank">
+        <i class="fab fa-github"></i>
+        </a>
+
+        <a title="Google Scholar"
+        class="social-button scholar"
+        href="https://scholar.google.com/citations?user=1tLNXt4AAAAJ"
+        itemprop="sameAs"
+        target="_blank">
+        <i class="ai ai-google-scholar-square"></i>
+        </a>
+
+        <a title="Bluesky"
+        class="social-button bluesky"
+        href="https://bsky.app/profile/ariesoeteman.bsky.social"
+        target="_blank" rel="noopener noreferrer">
+        <img src="{{ site.baseurl }}/assets/images/bluesky.svg" alt="Bluesky" class="social-icon" />
+        </a>
+
+        <!-- <a href="https://github.com/your-username" target="_blank" aria-label="GitHub">
+            <i class="fab fa-github"></i>
+        </a>
+        <a href="https://bsky.app/profile/your-handle.bsky.social" target="_blank" aria-label="Bluesky">
+            <img src="{{ site.baseurl }}/assets/images/bluesky_logo.jpg" alt="Bluesky" />
+        </a>
+        <a href="https://scholar.google.com/citations?user=yourID" target="_blank" aria-label="Google Scholar">
+            <i class="ai ai-google-scholar"></i>
+        </a>
+        <a href="https://linkedin.com/in/your-profile" target="_blank" aria-label="LinkedIn">
+            <i class="fab fa-linkedin"></i>
+        </a> -->
+
+        </div>
+        </div>
+    </div>
+
+        <div class = "about-text">
+            <h2 class="about-heading">About</h2>
+            {% capture about %}{% include about.md %}{% endcapture %}
+            {{ about | markdownify }}
+        </div>
+    </div>
+</section>

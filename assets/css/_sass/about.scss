@@ -1,0 +1,176 @@
+.about-section {
+  display: flex;
+  align-items: center; /* Vertically align items in the center */
+  justify-content: center; /* Horizontally center content for smaller screens */
+  flex-direction: column; /* Stack items vertically on small screens */
+  padding: 2em 1em; /* Padding for the entire section */
+  width: 95vw;
+  max-width: 95vw;
+  margin-left: calc(-50vw + 50%); // ← KEY for full-bleed inside a centered layout
+  min-height: 50vh;
+
+  // Optional: fix horizontal scroll bar if needed
+  overflow-x: hidden;
+  background-color: $about-bg-color;
+  // @media (prefers-color-scheme: dark) {
+  //   background-color: darken($body-bg-dark, 5%);
+  // }
+
+  @include media-query($on-palm) {
+    flex-direction: row;
+    align-items: flex-start;
+    justify-content: flex-start;
+    text-align: left;
+
+    // Make sure it aligns to the left
+    margin-right: auto;
+  }
+  @include media-query($on-laptop) {
+
+    padding: 4em 3em;
+  }
+}
+
+.about-content {
+  display: flex;
+  flex-direction: column; /* Stack image and text for smaller screens */
+  align-items: center; /* Center items horizontally within the column layout */
+  gap: 2em;
+  margin: 0 auto; /* Center the block itself on smaller screens (when flex-direction is column) */
+  width: 90%; /* Ensure it takes available width up to max-width */
+  max-width: $content-width+50px; // or $content-width, if defined
+
+  @include media-query($on-palm) {
+    flex-direction: row;
+    align-items: flex-start;
+    justify-content: center; // ← Center image+text together
+    text-align: left;
+    gap: 5vw; // Scales with screen width; try 3vw–5vw  
+    }
+}
+
+.about-image-block {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: flex-start;
+  gap: 1em;
+}
+
+.about-image {
+  width: 200px;
+  height: 200px;
+  object-fit: cover;
+  border-radius: 16px; // ← Rounded corners, not circular
+  border: 3px solid $green;
+  margin-bottom: 1.5em;
+
+  @include media-query($on-palm) {
+    width: 300px;
+    height: 300px;
+    margin-bottom: 0;
+    margin-top: 4.5em;
+  }
+
+  @include media-query($on-laptop) {
+    width: 350px;
+    height: 350px;
+    margin-top: 4.7em;
+  }
+}
+
+.about-social-footer {
+  display: flex;
+  justify-content: center;
+  gap: 1em;
+  font-size: 1.6em;
+  margin-top: 0.5em;
+
+  a {
+    color: $text-color;
+    transition: color 0.2s ease;
+
+    &:hover {
+      color: $text-color;
+    }
+
+    img {
+      width: 1.6em;
+      height: 1.6em;
+      vertical-align: middle;
+    }
+  }
+
+  @include media-query($on-palm) {
+    justify-content: flex-start;
+  }
+}
+
+.about-heading {
+  font-family: $header-font-family;
+  font-size: 2em;
+  font-weight: 700;
+  color: $about-heading-color;
+  // text-transform: uppercase;
+  letter-spacing: 1px;
+  margin: 0;
+}
+
+.about-text {
+  font-size: 1.1em;
+  line-height: 1.65;
+  color: $about-text-color;
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: flex-start;
+  text-align: left;
+  gap: 1em;
+
+  // Optional:
+  padding: 0 1em;
+
+  @include media-query($on-palm) {
+    padding: 0;
+  }
+  
+  a {
+    color: $about-text-color;
+  }
+}
+.about-text p {
+  margin: 0 0 0em 0; // Only bottom margin — this controls spacing between paragraphs
+}
+
+// .introduction-section {
+//   background-color: $body-bg; // Example: same as body background or different
+//   padding: 2em 1em; // Add padding
+//   min-height: 30vh; // Give it some height
+//   text-align: center; // Center text
+
+//   @media (prefers-color-scheme: dark) {
+//     background-color: $body-bg-dark;
+//   }
+
+//   .introduction-content {
+//     max-width: $content-width;
+//     margin: 0 auto;
+//     text-align: left; // Align text left within content
+//   }
+// }
+
+
+// Ensure main content also has padding and max-width
+.main-content {
+  max-width: $content-width;
+  margin: 0 auto;
+  padding: 2em 1em; // Ensure consistent padding for main content
+}
+
+
+.ai-google-scholar {
+  font-size: 2em !important;
+  color: $almost-white !important;
+  display: inline-block !important;
+}

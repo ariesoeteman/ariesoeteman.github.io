@@ -1,0 +1,124 @@
+<section id="portfolio" class="portfolio-section">
+    <div class = "portfolio-content">
+  <h2 class="portfolio-header">Selected Research</h2>
+  <div class="project-list">
+<div class='project-link-wrapper' onclick="window.open('https://arxiv.org/abs/2506.13911', '_blank')">
+    <div class="project-item">
+      <img src="{{ site.baseurl }}/assets/images/hegnn_thumbnail.jpg" alt="Project 1">
+      <div class="project-text">
+        <h3>The logical expressiveness of graph neural networks with hierarchical node individualization</h3>
+        <h4 class="project-author">Arie Soeteman, Balder ten Cate</h4>
+        <h5 class="project-venue">Under review</h5>
+        <p> A <a href="https://ojs.aaai.org/index.php/AAAI/article/view/4384" target="_blank">known result</a> on graph neural networks is that their separating power matches graded modal logic.
+            We extend this result to subgraph GNNs, and give a new architecture with complete separating power, inspired by isomorphism testers.
+         <span class="project-links">
+            <a href="https://arxiv.org/abs/2506.13911" class="project-button" target="_blank">Paper</a>
+            <a href="https://github.com/ariesoeteman/HEGNN" class="project-button" target="_blank">Github</a>
+         </span>
+        </p>
+      </div>
+    </div>
+</div>
+    <div class='project-link-wrapper' onclick="window.open('https://arxiv.org/abs/2501.13237', '_blank')">
+    <div class="project-item reverse">
+      <img src="{{ site.baseurl }}/assets/images/fidelity.jpg" alt="Project 2">
+      <div class="project-text">
+        <h3>Non-zero noise extrapolation: accurately simulating noisy quantum circuits with tensor networks</h3>
+        <h4 class="project-author">Anthony Thompson, Arie Soeteman, Chris Cade, Ido Niesen</h4>
+        <h5 class="project-venue">Under review</h5>
+        <p> Running quantum computations on GPUs requires an exponential amount of resources. 
+            Tensor network methods like <a href="https://journals.aps.org/prxquantum/abstract/10.1103/PRXQuantum.4.020304" target="_blank">DMRG</a>
+            allow for efficient approximate simulation, but are unfit to match actual quantum hardware with noise.
+            We develop non-zero noise extrapolation, and use this method to run noisy simulations 
+            previously beyond the reach of tensor networks.
+        <span class="project-links">
+            <a href="https://arxiv.org/abs/2501.13237" class="project-button" target="_blank">Paper</a>
+         </span>
+
+        </p>
+      </div>
+    </div>
+    </div>
+
+    <div class='project-link-wrapper' onclick="window.open('https://www.sciencedirect.com/science/article/pii/S0888613X23002372', '_blank')">
+    <div class="project-item">
+      <img src="{{ site.baseurl }}/assets/images/kant_portrait.jpg" alt="Project 3">
+      <div class="project-text">
+        <h3>Spatial Unity for the Apperception Engine</h3>
+        <h4 class="project-author">Arie Soeteman, Michiel van Lambalgen</h4>
+        <h5 class="project-venue">IJAR 2024</h5>
+        <p> The <a href="https://www.doc.ic.ac.uk/~re14/Evans-R-2020-PhD-Thesis.pdf" target="_blank">Apperception Engine</a> is a computational implementation
+            of Kant's cognitive architecture from the first critique. The systems constructs a logical theory that unifies sensory input.
+            We use the <a href="https://www.sciencedirect.com/science/article/pii/S0004370202003727" target="_blank"></a>Regional Connection Calculus</a> and 
+            <a href="https://www.mathnet.ru/php/archive.phtml?wshow=paper&jrnid=sm&paperid=5579&option_lang=rus" target="_blank">Alexandroff Topologies</a> to build a Spatial Apperception Engine, following Kant's figurative synthesis.
+        <span class="project-links">
+            <a href="https://www.sciencedirect.com/science/article/pii/S0888613X23002372" class="project-button" target="_blank">Paper</a>
+            <a href="https://github.com/ariesoeteman/figurative_apperception_engine" class="project-button" target="_blank">Github</a>
+         </span>
+        </p>
+      </div>
+  </div>
+  </div>
+
+    <div class='project-link-wrapper' onclick="window.open('https://link.springer.com/chapter/10.1007/978-3-031-20614-6_19', '_blank')">
+    <div class="project-item reverse">
+      <img src="{{ site.baseurl }}/assets/images/pb.jpg" alt="Project 3">
+      <div class="project-text">
+        <h3>Participatory budgeting with multiple resources</h3>
+        <h4 class="project-author">Nima Motamed, Arie Soeteman, Simon Rey, Ulle Endriss</h4>
+        <h5 class="project-venue">EUMAS 2022</h5>
+        <p>In <a href="https://www.participatorybudgeting.org/" target="_blank">Participatory Budgeting</a>,
+             citizens vote on how to allocate public funds to projects—an approach shown to improve well-being
+              and trust in government. The model is gaining global traction and is now used in my
+               neighborhood in <a href="https://denkmee.amsterdam.nl/oudoost/" target="_blank">Amsterdam</a>.
+            We study a setting where projects require multiple resources and analyze how core properties
+             like proportionality and strategy-proofness extend to this case. <span class="project-links">
+            <a href="https://link.springer.com/chapter/10.1007/978-3-031-20614-6_19" class="project-button" target="_blank">Paper</a>
+         </span>
+        </p>
+      </div>
+      </div>
+  </div>
+  </div>
+
+  <h2 class="portfolio-header">Science-related</h2>
+
+  <div class="project-list">
+  <div class='project-link-wrapper' onclick="window.open('https://www.fermioniq.com/ava', '_blank')">
+    <div class="project-item">
+      <img src="{{ site.baseurl }}/assets/images/ava.jpg" alt="Project 1">
+      <div class="project-text">
+        <h3>Quantum circuit emulation with Ava</h3>
+        <p> At <a href="https://www.fermioniq.com/" target="_blank">Fermioniq</a>, 
+            I was a core developer of Ava, a state-of-the-art tensor-network based quantum circuit emulator. 
+            Ava supports pure-state and noisy emulation via a simple python interface, 
+            with features like customizable noise models, circuit compression and quantum machine learning.
+            If you want to explore how quantum computing could benefit your project,
+             feel free to reach out to set up a conversation or experiment.
+         <span class="project-links">
+            <a href="https://docs.fermioniq.com/" class="project-button" target="_blank">Tutorial</a>
+        </span>
+        </p>
+      </div>
+    </div>
+    </div>
+
+    <div class='project-link-wrapper' onclick="window.open('https://www.goal3.org/', '_blank')">
+    <div class="project-item reverse">
+      <img src="{{ site.baseurl }}/assets/images/goal3.jpg" alt="Project 1">
+      <div class="project-text">
+        <h3>Critical event prediction with GOAL3</h3>
+        <p> <a href="https://www.goal3.org/" target="_blank">GOAL3</a> 
+            is a social enterprise improving healthcare in low-resource settings.
+            Its IMPALA system is a vital sign monitor used in Malawi, Rwanda and Tanzania that helps 
+            unburden health workers and supports better diagnosis and treatment.
+            I am machine learning models with logical structore to predict critical events from IMPALA data.
+            
+            Let me know if you're interested or want to contribute.
+        </p>
+      </div>
+    </div>
+  </div>
+  </div>
+</div>
+</section>

@@ -1,0 +1,27 @@
+gemini-repo-cli personal_webpage _layouts/new_default.html \
+  "You are an expert in modern, professional academic website design using Jekyll. I need a new HTML structure for my main layout (`_layouts/new_default.html`).
+  Based on my current `_layouts/default.html` (provided below), create a clean, responsive HTML5 structure suitable for an academic personal page.
+
+  Key requirements:
+  -   **Header:** A clean, sticky header. On the left, display 'Arie Soeteman' (using `site.title`). On the right, have navigation links for 'Home', 'Research', 'Publications', 'Teaching', 'Projects', 'About', and 'Contact'.
+  -   **First Screen (Hero Section):** A prominent 'hero' section immediately below the header. This section should be designed to take up the initial viewport, have a distinct background color (to be handled by CSS), include a placeholder for a professional picture (e.g., `<img class='hero-image' src='{{ site.baseurl }}/assets/img/your-photo.jpg' alt='Arie Soeteman'>`), and a concise welcome text (using `site.description` or `site.tagline`).
+  -   **Second Section (Introduction):** Immediately below the hero section, create a separate 'introduction' section. This section should have a different background color (also CSS-handled) and be designed for more detailed introductory text about your work or research.
+  -   **Main Content:** Ensure there's a clear area (`{{ content }}`) where individual page content will render.
+  -   **Footer:** A clean footer with copyright and social links.
+
+  **Important:**
+  -   Use semantic HTML5 tags (e.g., `<header>`, `<nav>`, `<section>`, `<main>`, `<footer>`).
+  -   Ensure the structure supports full responsiveness.
+  -   Keep existing Jekyll Liquid tags for `site.baseurl`, `page.title`, `site.title`, `site.description`, `site.affiliation`, `site.time`, `{{ content }}`, `{% seo %}`, `{% include favicon.html %}`, `{% include mathjax.html %}`, `{% include analytics.html %}`, if they are still relevant.
+  -   For navigation, assume it will be hardcoded in the layout for now, or use a simple Liquid loop if that makes sense for the structure.
+  -   Do not include any CSS; focus solely on the HTML structure.
+  -   Output only the HTML code block.
+
+  Here's my current `_layouts/default.html` for context:
+  \`\`\`html
+  $(cat _layouts/default.html)
+  \`\`\`
+  " \
+  --files _layouts/default.html \
+  --gemini-model gemini-1.5-flash \
+  --output gemini_output/_layouts/new_default.html

@@ -1,0 +1,80 @@
+```html
+---
+layout: compress
+---
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="{{ site.baseurl }}/assets/css/main.css"> <!-- Link to your CSS file -->
+    <title>{{ page.title | default: site.title }}</title>
+    <meta name="description" content="{{ page.description | default: site.description }}">
+    {% seo %}
+    {% include favicon.html %}
+    <!-- Load fontawesome here for faster loadtimes -->
+    <script
+        type="text/javascript"> (function () { var css = document.createElement('link'); css.href = 'https://use.fontawesome.com/releases/v5.11.0/css/all.css'; css.rel = 'stylesheet'; css.type = 'text/css'; document.getElementsByTagName('head')[0].appendChild(css); })(); </script>
+</head>
+
+<body>
+    <header class="sticky-top">
+        <nav>
+            <ul>
+                <li><a href="/">Home</a></li>
+                <li><a href="/research">Research</a></li>
+                <li><a href="/publications">Publications</a></li>
+                <li><a href="/teaching">Teaching</a></li>
+                <li><a href="/projects">Projects</a></li>
+                <li><a href="/about">About</a></li>
+                <li><a href="/contact">Contact</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <section id="hero">
+        <!-- Optional Hero Section:  Image or statement -->
+        <div class="hero-content">
+            <h1>{{ site.title }}</h1>
+            <p>{{ site.description }}</p>
+            <p><a href="https://www.fermioniq.com/">{{ site.affiliation }}</a></p>
+        </div>
+    </section>
+
+    <main>
+        <article>
+            {{ content }}
+        </article>
+
+        <section id="recent-posts">
+            <h2>Recent Posts/News</h2>
+            <!-- Recent posts will be inserted here using a Liquid loop -->
+        </section>
+
+        <section id="featured-research">
+            <h2>Featured Research/Projects</h2>
+            <!-- Featured research/projects will be inserted here using a Liquid loop -->
+        </section>
+    </main>
+
+    <footer>
+        <p class="copy">
+            <small>&copy; {{ site.title }} {{ site.time | date: '%Y' }} | Powered by Jekyll</small>
+        </p>
+        <div class="social-links">
+            {% if site.github %}<a href="{{ site.github }}" target="_blank" rel="noopener"><i
+                    class="fab fa-github"></i></a>{% endif %}
+            {% if site.linkedin %}<a href="{{ site.linkedin }}" target="_blank" rel="noopener"><i
+                    class="fab fa-linkedin"></i></a>{% endif %}
+            {% if site.google_scholar %}<a href="{{ site.google_scholar }}" target="_blank" rel="noopener"><i
+                    class="fas fa-graduation-cap"></i></a>{% endif %}
+            <!-- Add other social links as needed -->
+        </div>
+    </footer>
+
+    {% include analytics.html %}
+</body>
+
+</html>
+```

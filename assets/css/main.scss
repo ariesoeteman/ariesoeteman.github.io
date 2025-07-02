@@ -1,29 +1,56 @@
+--- 
+# Only the main Sass file needs front matter (the dashes are enough) 
 ---
-# Only the main Sass file needs front matter (the dashes are enough)
----
-
 
 @charset "utf-8";
 
 // Width of the content area
-$content-width:    800px;
-$on-phone:         450px;
-$on-palm:          660px;
-$on-laptop:        1000px;
+$content-width: 1200px;
+$on-phone: 450px;
+$on-palm: 660px;
+$on-laptop: 1000px;
 
 @mixin media-query($device) {
-    @media screen and (max-width: $device) {
+    @media screen and (min-width: $device) {
         @content;
     }
 }
 
+
+
+html {
+  scroll-behavior: smooth;
+}
 // Import partials from `sass_dir` (defaults to `_sass`)
 // Do not make any changes to this file. Go to /_sass and find the appropriate SCSS file and make changes there.
 
 // JN: For now, split @import to anable conditional import of CSS. Also. @import may be deprecated soon so plan
 // for this change
 
+// Breakpoints
+$large-breakpoint: 64em !default;
+$medium-breakpoint: 42em !default;
+@mixin large {
+  @media screen and (min-width: #{$large-breakpoint}) {
+    @content;
+  }
+}
+
+@mixin medium {
+  @media screen and (min-width: #{$medium-breakpoint}) and (max-width: #{$large-breakpoint}) {
+    @content;
+  }
+}
+
+@mixin small {
+  @media screen and (max-width: #{$medium-breakpoint}) {
+    @content;
+  }
+}
+
+
 @import 'variables';
+@import 'custom-header';
 @import 'footer-social';
 @import 'projects';
 @import 'profile';
@@ -31,3 +58,7 @@ $on-laptop:        1000px;
 @import 'style';
 @import 'google-fonts';
 @import 'syntax-highlighting';
+@import 'hero';
+@import 'about';
+@import 'portfolio';
+@import 'custom-footer';

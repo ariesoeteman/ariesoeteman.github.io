@@ -1,54 +1,115 @@
 ---
-# layout: compress
+layout: compress
 ---
 <!DOCTYPE html>
-<html>
+<html lang="en">
 
-    <head>
-        <meta charset="utf-8">
-        <meta content="width=device-width, initial-scale=1" name="viewport">
-        <link rel="stylesheet" href="{{site.baseurl}}/assets/css/main.css">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
 
-        <title>{{page.title}}</title>
-        <meta name="description" content="{{ page.description | default: site.description }}">
-        <h1 class="post-headline">{{site.title}}</h1>
-        <h3 class="post-description">{{site.description}}</h3>
-        <h3 class="post-description"><a href="https://www.fermioniq.com/">{{site.affiliation}}</a></h3>
+  <!-- Font Awesome (for GitHub, LinkedIn, etc.) -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
 
-        {% include navigation.html %}
+  <!-- Academicons (for Google Scholar) -->
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/jpswalsh/academicons@1/css/academicons.min.css">
+  <!-- Site CSS -->
+  <link rel="stylesheet" href="{{ site.baseurl }}/assets/css/main.css">
 
-        {% seo %}
+  <title>{{ page.title | default: site.title }}</title>
+  <meta name="description" content="{{ page.description | default: site.description }}">
 
-        {% include favicon.html %}
+  {% seo %}
+  {% include favicon.html %}
+  {% include mathjax.html %}
 
-        {% include mathjax.html %}
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "Person",
+  "name": "Arie Soeteman",
+  "url": "https://ariesoeteman.github.io/",
+  "sameAs": [
+    "https://www.linkedin.com/in/your-profile",
+    "https://scholar.google.com/your-id",
+    "https://github.com/ariesoeteman"
+  ],
+  "jobTitle": "PhD student in Logical Reasoning for AI",
+  "affiliation": {
+    "@type": "EducationalOrganization",
+    "name": "University of Amsterdam"
+  }
+}
+</script>
 
-        <!-- Load fontawesome here for faster loadtimes: https://stackoverflow.com/a/35880730/9523246 -->
-        <script type="text/javascript"> (function() { var css = document.createElement('link'); css.href = 'https://use.fontawesome.com/releases/v5.11.0/css/all.css'; css.rel = 'stylesheet'; css.type = 'text/css'; document.getElementsByTagName('head')[0].appendChild(css); })(); </script>
-    </head>
+</head>
 
-    <body>
+<body>
+    <header class="custom-site-header">
+        <div class="custom-header-content">
+            <h1 class="custom-site-title"><a href="{{ site.baseurl }}/">Arie Soeteman</a></h1>
+            <nav class="custom-site-nav">
+                <ul>
+                    <li><a href=#home>Home</a></li>
+                    <li><a href=#about>About</a></li>
+                    <li><a href=#portfolio>Research</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
         <main>
-            <article>
-                {{ content }}
-            </article>
+            {{ content }}
         </main>
 
-        <footer>
-          <p class="copy">
-            <small> &copy; {{site.title}} {{ site.time | date: '%Y' }}
-                    | Powered by Jekyll and
-                    <a target="_blank" href="https://github.com/jitinnair1/gradfolio/">Gradfolio</a>.
-                    Last updated on {{ site.time | date_to_long_string }}
-            </small>
-          </p>
+    <footer class="custom-site-footer">
+        <div class="custom-footer-content">
+        <div class="footer-content">
+            <p class="copyright">
+                <small>&copy; {{ site.title }} {{ site.time | date: '%Y' }}</small>
+            </p>
+        </div>
+        </div>
+    </footer>
 
-        {% include social-footer.html %}
+    {% include analytics.html %}
 
-        </footer>
-
-        {% include analytics.html %}
-
-    </body>
+</body>
 
 </html>
+
+<script>
+document.querySelectorAll('a[href^="#"]').forEach(link => {
+  link.addEventListener('click', function(e) {
+    e.preventDefault();
+
+    const targetId = this.getAttribute('href').substring(1);
+    const target = document.getElementById(targetId);
+    if (!target) return;
+
+    const start = window.scrollY;
+    const end = target.getBoundingClientRect().top + start;
+    const duration = 800; // in ms
+    const startTime = performance.now();
+
+    function scrollStep(currentTime) {
+      const elapsed = currentTime - startTime;
+      const progress = Math.min(elapsed / duration, 1);
+
+      // easeInOutQuad easing
+      const ease = progress < 0.5
+        ? 2 * progress * progress
+        : -1 + (4 - 2 * progress) * progress;
+
+      window.scrollTo(0, start + (end - start) * ease);
+
+      if (elapsed < duration) {
+        requestAnimationFrame(scrollStep);
+      }
+    }
+
+    requestAnimationFrame(scrollStep);
+    history.replaceState(null, null, ' ');
+  });
+});
+</script>
