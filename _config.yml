@@ -3,15 +3,15 @@
 title: Arie Soeteman
 description: PhD Candidate; Machine Learning for Automated Reasoning
 affiliation: University of Amsterdam
-
+image: /assets/images/favicon.png
 # baseurl: /personal_webpage #name of GitHub repository
 url: "" #custom url to be used instead of GitHub repository
 email: #
 
 # Pagination
-# paginate: 4
+paginate: 4
 permalink: /blog/:year/:title/
-# paginate_path: /blog/page:num/
+paginate_path: /blog/page:num/
 
 # Social media links in footer
 # twitter: false
@@ -69,11 +69,10 @@ exclude:
   - vendor/bundle/
   - gemini_output/
   - _posts/
-  - 
   # - vendor/bundle/ruby/3.0.0/gems/jekyll-3.10.0/lib/site_template
   # - vendor/bundle/ruby/3.0.0/gems/jekyll-4.3.2/lib/site_template
 
 plugins:
   - jekyll-seo-tag
-  # - jekyll-paginate
+  - jekyll-paginate
   - jekyll-sitemap
