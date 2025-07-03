@@ -1,18 +1,29 @@
 ### your site title here
 
 title: Arie Soeteman
-description: Portfolio of Arie Soeteman; Machine Learning for Automated Reasoning
+description: PhD Candidate; Machine Learning for Automated Reasoning
 affiliation: University of Amsterdam
 
 # baseurl: /personal_webpage #name of GitHub repository
-url: "https://ariesoeteman.github.io/" #custom url to be used instead of GitHub repository
-author: Arie Soeteman
+url: "" #custom url to be used instead of GitHub repository
 email: #
 
 # Pagination
-paginate: 4
+# paginate: 4
 permalink: /blog/:year/:title/
-paginate_path: /blog/page:num/
+# paginate_path: /blog/page:num/
+
+# Social media links in footer
+# twitter: false
+# linkedin: "#"
+# stackoverflow: "#"
+# github: "#"
+# researchgate: "#"
+# orcid: "#"
+# quora: "#"
+# instagram: "#"
+# facebook: "#"
+
 
 # Markdown
 highlighter: rouge
@@ -64,5 +75,5 @@ exclude:
 
 plugins:
   - jekyll-seo-tag
-  - jekyll-paginate
+  # - jekyll-paginate
   - jekyll-sitemap
