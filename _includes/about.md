@@ -6,4 +6,4 @@ From 2022 to 2024, I worked As a researcher and developer at [Fermioniq](https:/
 
 I enjoy teaching and presenting, and I'm always looking for ways to apply my technical background to socially meaningful problems. At the moment, I'm contributing to [GOAL3](https://www.goal3.org/nl), using AI and logic to predict critical illness events in low-resource intensive care units. The goal is to build an explainable prediction tool that can help save lives.
 
-If you are interested in any of these topics and would like to discuss ideas, feel free to connect on Linkedin or send an email to awsoeteman@hotmail.com. I am always open to talk.
+If you are interested in any of these topics and would like to discuss ideas, feel free to connect on Linkedin or send an email to a.w.[my surname]@uva.nl. I am always open to talk.
