@@ -6,6 +6,7 @@ affiliation: University of Amsterdam
 image: /assets/images/favicon.png
 # baseurl: /personal_webpage #name of GitHub repository
 url: "https://ariesoeteman.github.io" #custom url to be used instead of GitHub repository
+baseurl: ""
 email: #
 
 # Pagination
