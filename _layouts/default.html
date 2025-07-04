@@ -1,25 +1,26 @@
 ---
 layout: compress
+title: Arie Soeteman
 ---
 <!DOCTYPE html>
 <html lang="en">
 
 <head>
+  <title>{{ page.title | default: site.title }}</title>
+
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
 
+  {% seo %}
+
   <!-- Font Awesome (for GitHub, LinkedIn, etc.) -->
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
-
   <!-- Academicons (for Google Scholar) -->
-<link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/jpswalsh/academicons@1/css/academicons.min.css">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/jpswalsh/academicons@1/css/academicons.min.css">
   <!-- Site CSS -->
   <link rel="stylesheet" href="{{ site.baseurl }}/assets/css/main.css">
+  
 
-  <title>{{ page.title | default: site.title }}</title>
-  <meta name="description" content="{{ page.description | default: site.description }}">
-
-  {% seo %}
   {% include favicon.html %}
   {% include mathjax.html %}
 
@@ -30,11 +31,11 @@ layout: compress
   "name": "Arie Soeteman",
   "url": "https://ariesoeteman.github.io/",
   "sameAs": [
-    "https://www.linkedin.com/in/your-profile",
-    "https://scholar.google.com/your-id",
+    "https://www.linkedin.com/in/arie-soeteman",
+    "https://scholar.google.com/citations?user=1tLNXt4AAAAJ",
     "https://github.com/ariesoeteman"
   ],
-  "jobTitle": "PhD student in Logical Reasoning for AI",
+  "jobTitle": "PhD student in Machine Learning for Automated Reasoning",
   "affiliation": {
     "@type": "EducationalOrganization",
     "name": "University of Amsterdam"
